@@ -4,7 +4,7 @@ const conf = require ('../../../../server.config');
 const getCredentialsFromDb = async req => {
   console.log (
     '[authoristion.repository.js] in getCredentialsFromDb',
-    req.username
+    req.email
   );
   try {
     const collection = await getCollection (
@@ -14,10 +14,10 @@ const getCredentialsFromDb = async req => {
       `${conf.MONGODB_CONNECTION_STRING}/${conf.DB_NAME}`
     );
     let dbCredentials = await collection
-      .findOne ({}, {_id: 0, username: req.username})
+      .findOne ({}, {_id: 0, email: req.email})
       .then (result => {
         console.log (result);
-        if (result.username === req.username) {
+        if (result.email === req.email) {
           return result;
         }
       })
@@ -25,10 +25,7 @@ const getCredentialsFromDb = async req => {
         console.log (err);
         return null;
       });
-    console.log (
-      '[authoristion.repository.js] username from DB',
-      dbCredentials
-    );
+    console.log ('[authoristion.repository.js] email from DB', dbCredentials);
     return dbCredentials;
   } catch (error) {
     return null;
