@@ -3,6 +3,8 @@ const bodyParser = require ('body-parser');
 //server config
 const conf = require ('./server.config');
 const next = require ('next');
+process.env.NODE_ENV = 'development';
+process.env.BABEL_ENV = 'development';
 const dev = process.env.NODE_ENV !== 'production';
 const app = next ({dev});
 const handle = app.getRequestHandler ();
