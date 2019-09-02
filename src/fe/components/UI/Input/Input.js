@@ -9,6 +9,9 @@ const input = props => {
     case 'input':
       inputElement = (
         <Styled.InputElementTypeInput
+          invalid={props.invalid}
+          shouldValidate={props.shouldValidate}
+          touched={props.touched}
           {...props.elementConfig}
           value={props.value}
           onChange={props.changed}
@@ -18,6 +21,9 @@ const input = props => {
     case 'textarea':
       inputElement = (
         <Styled.InputElementTypeTextarea
+          invalid={props.invalid}
+          shouldValidate={props.shouldValidate}
+          touched={props.touched}
           {...props.elementConfig}
           value={props.value}
           onChange={props.changed}
@@ -27,6 +33,9 @@ const input = props => {
     case 'select':
       inputElement = (
         <Styled.InputElementTypeSelect
+          invalid={props.invalid}
+          shouldValidate={props.shouldValidate}
+          touched={props.touched}
           value={props.value}
           onChange={props.changed}
         >
@@ -41,6 +50,9 @@ const input = props => {
     default:
       inputElement = (
         <Styled.InputElementTypeInput
+          invalid={props.invalid}
+          shouldValidate={props.shouldValidate}
+          touched={props.touched}
           {...props.elementConfig}
           value={props.value}
           onChange={props.changed}
