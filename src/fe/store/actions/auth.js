@@ -56,6 +56,8 @@ export const auth = (email, password, isSignup) => {
             console.log (data);
             if (data.token) {
               dispatch (authSuccess (data.token));
+            } else {
+              dispatch (authFail ('Invalid mail address'));
             }
           },
           err => {
@@ -63,7 +65,7 @@ export const auth = (email, password, isSignup) => {
             dispatch (authFail (err));
           }
         );
-        dispatch (checkAuthTimeout (response.data.expiresIn));
+        // dispatch (checkAuthTimeout (response.data.expiresIn));
       })
       .catch (err => {
         console.log (err);

@@ -4,6 +4,7 @@ import * as actions from '../../store/actions/index';
 
 import Input from '../../components/UI/Input/Input';
 import Button from '../../components/UI/Button/Button';
+import Spinner from '../../components/UI/Spinner/Spinner';
 import * as Styled from './StyledAuth';
 
 class Auth extends Component {
@@ -92,11 +93,15 @@ class Auth extends Component {
 
   submitHandler = event => {
     event.preventDefault ();
-    this.props.onAuth (
-      this.state.controls.email.value,
-      this.state.controls.password.value,
-      this.state.isSignup
-    );
+    if (this.state.controls.email.valid && this.state.controls.password.valid) {
+      this.props.onAuth (
+        this.state.controls.email.value,
+        this.state.controls.password.value,
+        this.state.isSignup
+      );
+    } else {
+      this.props.onError ('Invalid Credentials');
+    }
   };
 
   render () {
@@ -121,14 +126,14 @@ class Auth extends Component {
       />
     ));
 
-    // if (this.props.loading) {
-    //   form = <Spinner />;
-    // }
+    if (this.props.loading) {
+      form = <Spinner />;
+    }
 
     let errorMessage = null;
 
     if (this.props.error) {
-      errorMessage = <p>{this.props.error.message}</p>;
+      errorMessage = <p>{this.props.error}</p>;
     }
 
     return (
@@ -147,6 +152,7 @@ const mapStateToProps = state => {
   return {
     loading: state.auth.loading,
     error: state.auth.error,
+    isSignup: state.auth.isSignup,
   };
 };
 
@@ -154,6 +160,7 @@ const mapDispatchToProps = dispatch => {
   return {
     onAuth: (email, password, isSignup) =>
       dispatch (actions.auth (email, password, isSignup)),
+    onError: error => dispatch (actions.authFail (error)),
   };
 };
 
