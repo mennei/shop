@@ -23,4 +23,10 @@ const verifyToken = req => {
   const verify = jwt.verify (credentials, 'shop.service');
   return verify;
 };
-module.exports = {getToken, verifyToken};
+
+const doSignup = async req => {
+  console.log ('[authoristion.service.js] in signup service');
+  const resopnse = await repository.doSignup (req.body);
+  return resopnse;
+};
+module.exports = {getToken, verifyToken, doSignup};

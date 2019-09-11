@@ -2,17 +2,20 @@ import fetch from 'isomorphic-unfetch';
 
 import * as actionTypes from './actionTypes';
 
+const conf = require ('../../../../server.config');
+
 export const authStart = () => {
   return {
     type: actionTypes.AUTH_START,
   };
 };
 
-export const authSuccess = token => {
+export const authSuccess = (token, userId) => {
   console.log (token);
   return {
     type: actionTypes.AUTH_SUCCESS,
     idToken: token,
+    userId: userId,
   };
 };
 
@@ -41,7 +44,12 @@ export const auth = (email, password, isSignup) => {
   return dispatch => {
     dispatch (authStart ());
     const authData = {email: email, password: password};
-    const url = 'http://localhost:3000/api/v1/authoristion/getToken';
+    let url;
+    if (isSignup) {
+      url = `${conf.BASE_API_PATH}authoristion/doSignup`;
+    } else {
+      url = `${conf.BASE_API_PATH}authoristion/getToken`;
+    }
     fetch (url, {
       method: 'post',
       body: JSON.stringify (authData),
@@ -54,8 +62,9 @@ export const auth = (email, password, isSignup) => {
         tokenPromise.then (
           data => {
             console.log (data);
-            if (data.token) {
-              dispatch (authSuccess (data.token));
+            if (data.token || data.userId) {
+              dispatch (authSuccess (data.token, data.userId));
+              dispatch (checkAuthTimeout (5));
             } else {
               dispatch (authFail ('Invalid mail address'));
             }
@@ -65,7 +74,6 @@ export const auth = (email, password, isSignup) => {
             dispatch (authFail (err));
           }
         );
-        // dispatch (checkAuthTimeout (response.data.expiresIn));
       })
       .catch (err => {
         console.log (err);
