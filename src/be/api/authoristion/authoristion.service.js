@@ -25,7 +25,7 @@ const verifyToken = req => {
 };
 
 const doSignup = async req => {
-  console.log ('[authoristion.service.js] in signup service');
+  console.log ('[authoristion.service.js] in signup service', req.body);
   const resopnse = await repository.doSignup (req.body);
   return resopnse;
 };

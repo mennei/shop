@@ -10,20 +10,19 @@ import * as Styled from './StyledAuth';
 class Auth extends Component {
   state = {
     controls: {
-      email: {
+      username: {
         elementType: 'input',
         elementConfig: {
-          type: 'email',
-          placeholder: 'Mail Address',
+          type: 'text',
+          placeholder: 'username',
         },
         value: '',
         validation: {
           required: true,
-          isEmail: true,
         },
         valid: false,
         touched: false,
-        label: 'Please type your email',
+        label: 'Please type your username',
       },
       password: {
         elementType: 'input',
@@ -35,6 +34,7 @@ class Auth extends Component {
         validation: {
           required: true,
           minLength: 6,
+          maxLength: 8,
         },
         valid: false,
         touched: false,
@@ -78,24 +78,17 @@ class Auth extends Component {
       isValid = value.length <= rules.maxLength && isValid;
     }
 
-    if (rules.isEmail) {
-      const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-      isValid = pattern.test (value) && isValid;
-    }
-
-    if (rules.isNumeric) {
-      const pattern = /^\d+$/;
-      isValid = pattern.test (value) && isValid;
-    }
-
     return isValid;
   }
 
   submitHandler = event => {
     event.preventDefault ();
-    if (this.state.controls.email.valid && this.state.controls.password.valid) {
+    if (
+      this.state.controls.username.valid &&
+      this.state.controls.password.valid
+    ) {
       this.props.onAuth (
-        this.state.controls.email.value,
+        this.state.controls.username.value,
         this.state.controls.password.value,
         this.state.isSignup
       );
@@ -167,8 +160,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onAuth: (email, password, isSignup) =>
-      dispatch (actions.auth (email, password, isSignup)),
+    onAuth: (username, password, isSignup) =>
+      dispatch (actions.auth (username, password, isSignup)),
     onError: error => dispatch (actions.authFail (error)),
   };
 };

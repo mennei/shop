@@ -11,7 +11,6 @@ export const authStart = () => {
 };
 
 export const authSuccess = (token, userId) => {
-  console.log (token);
   return {
     type: actionTypes.AUTH_SUCCESS,
     idToken: token,
@@ -40,10 +39,17 @@ export const checkAuthTimeout = expirationTime => {
   };
 };
 
-export const auth = (email, password, isSignup) => {
+export const fetchProductsStart = token => {
+  return {
+    type: actionTypes.FETCH_PRODUCTS_START,
+    idToken: token,
+  };
+};
+
+export const auth = (username, password, isSignup) => {
   return dispatch => {
     dispatch (authStart ());
-    const authData = {email: email, password: password};
+    const authData = {username: username, password: password};
     let url;
     if (isSignup) {
       url = `${conf.BASE_API_PATH}authoristion/doSignup`;
@@ -64,9 +70,10 @@ export const auth = (email, password, isSignup) => {
             console.log (data);
             if (data.token || data.userId) {
               dispatch (authSuccess (data.token, data.userId));
-              dispatch (checkAuthTimeout (5));
+              dispatch (fetchProductsStart (data.token));
+              // dispatch (checkAuthTimeout (5));
             } else {
-              dispatch (authFail ('Invalid mail address'));
+              dispatch (authFail ('Invalid username'));
             }
           },
           err => {

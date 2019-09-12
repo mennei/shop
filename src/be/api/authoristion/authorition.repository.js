@@ -5,7 +5,7 @@ const getCredentialsFromDb = async req => {
   try {
     console.log (
       '[authoristion.repository.js] in getCredentialsFromDb',
-      req.email
+      req.username
     );
     const collection = await getCollection (
       req,
@@ -15,13 +15,13 @@ const getCredentialsFromDb = async req => {
     );
     let dbCredentials = await collection
       .findOne ({
-        email: {
-          $in: [req.email],
+        username: {
+          $in: [req.username],
         },
       })
       .then (result => {
         console.log (result);
-        if (result && result.email === req.email) {
+        if (result && result.username === req.username) {
           return result;
         }
       })
@@ -29,7 +29,10 @@ const getCredentialsFromDb = async req => {
         console.log (err);
         return null;
       });
-    console.log ('[authoristion.repository.js] email from DB', dbCredentials);
+    console.log (
+      '[authoristion.repository.js] username from DB',
+      dbCredentials
+    );
     return dbCredentials;
   } catch (error) {
     return null;
@@ -37,7 +40,7 @@ const getCredentialsFromDb = async req => {
 };
 
 const doSignup = async req => {
-  console.log ('[authoristion.repository.js] in doSignup', req.email);
+  console.log ('[authoristion.repository.js] in doSignup', req);
   return new Promise (async (resolve, reject) => {
     const collection = await getCollection (
       req,
@@ -45,18 +48,22 @@ const doSignup = async req => {
       conf.DB_NAME,
       `${conf.MONGODB_CONNECTION_STRING}/${conf.DB_NAME}`
     );
-    await collection.find ({email: req.email}).toArray (async (err, result) => {
-      if (err) {
-        return reject (err);
-      }
-      if (result && result[0] && result[0].email) {
-        return reject ('Email exist');
-      } else {
-        await collection.insertOne ({email: req.email}).then (result => {
-          return resolve (result.insertedId);
-        });
-      }
-    });
+    await collection
+      .find ({username: req.username})
+      .toArray (async (err, result) => {
+        if (err) {
+          return reject (err);
+        }
+        if (result && result[0] && result[0].username) {
+          return reject ('username exist');
+        } else {
+          await collection
+            .insertOne ({username: req.username})
+            .then (result => {
+              return resolve (result.insertedId);
+            });
+        }
+      });
   });
 };
 module.exports = {getCredentialsFromDb, doSignup};
