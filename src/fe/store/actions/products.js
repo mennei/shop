@@ -6,27 +6,39 @@ const conf = require ('../../../../server.config');
 
 export const fetchProductsFail = error => {
   return {
-    type: actionTypes.AUTH_FAIL,
+    type: actionTypes.FETCH_PRODUCTS_FAIL,
     error: error,
   };
 };
 
-export const fetchProductsSuccess = (token, productsList) => {
+export const fetchProductsSuccess = (idToken, products) => {
   return {
     type: actionTypes.FETCH_PRODUCTS_SUCCESS,
-    idToken: token,
-    products: productsList,
+    token: idToken,
+    list: products,
   };
 };
 
 export const fetchProducts = token => {
   return dispatch => {
     if (!token) {
-      dispatch (fetchProductsFail ('Invalid token'));
+      return dispatch (fetchProductsFail ('Invalid token'));
     }
-    const url = `${conf.BASE_API_PATH}products/getProductsList?token=${token}`;
+    const url = `${conf.BASE_API_PATH}product/getProductsList?token=${token}`;
     fetch (url, {method: 'get'})
-      .then (dispatch (fetchProductsSuccess (token, data.productsList)))
+      .then (response => {
+        let listPromise = response.json ();
+        listPromise.then (
+          data => {
+            let list = data.productsList;
+            dispatch (fetchProductsSuccess (token, list));
+          },
+          err => {
+            console.log (err);
+            dispatch (fetchProductsFail (err));
+          }
+        );
+      })
       .catch (err => dispatch (fetchProductsFail (err)));
   };
 };

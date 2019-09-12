@@ -5,11 +5,11 @@ const initialState = {
   token: null,
   error: null,
   loading: false,
-  products: [],
+  list: [],
 };
 
-const fetchProductsStart = (state, action) => {
-  return updateObject (state, {error: null, loading: true, products: []});
+const fetchProductsStart = state => {
+  return updateObject (state, {error: null, loading: true, list: []});
 };
 
 const fetchProductsSuccess = (state, action) => {
@@ -17,7 +17,7 @@ const fetchProductsSuccess = (state, action) => {
     token: action.idToken,
     error: null,
     loading: false,
-    products: action.products,
+    list: action.list,
   });
 };
 
@@ -25,7 +25,7 @@ const fetchProductsFail = (state, action) => {
   return updateObject (state, {
     error: action.error,
     loading: false,
-    products: [],
+    list: [],
   });
 };
 

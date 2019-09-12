@@ -5,6 +5,7 @@ import thunk from 'redux-thunk';
 import Layout from '../src/fe/hoc/Layout/Layout';
 import Auth from '../src/fe/containers/Auth/Auth';
 import authReducer from '../src/fe/store/reducers/auth';
+import productsReducer from '../src/fe/store/reducers/products';
 
 const composeEnhancers =
   (typeof window != 'undefined' &&
@@ -13,6 +14,7 @@ const composeEnhancers =
 
 const rootReducer = combineReducers ({
   auth: authReducer,
+  products: productsReducer,
 });
 
 const store = createStore (
@@ -21,7 +23,11 @@ const store = createStore (
 );
 
 const Index = () => (
-  <Provider store={store}><Layout><Auth /></Layout></Provider>
+  <Provider store={store}>
+    <Layout>
+      <Auth />
+    </Layout>
+  </Provider>
 );
 
 export default Index;

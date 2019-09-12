@@ -39,10 +39,10 @@ export const checkAuthTimeout = expirationTime => {
   };
 };
 
-export const fetchProductsStart = token => {
+export const fetchProductsStart = idToken => {
   return {
     type: actionTypes.FETCH_PRODUCTS_START,
-    idToken: token,
+    token: idToken,
   };
 };
 
@@ -67,7 +67,6 @@ export const auth = (username, password, isSignup) => {
         let tokenPromise = response.json ();
         tokenPromise.then (
           data => {
-            console.log (data);
             if (data.token || data.userId) {
               dispatch (authSuccess (data.token, data.userId));
               dispatch (fetchProductsStart (data.token));
