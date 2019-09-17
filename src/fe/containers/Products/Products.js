@@ -4,7 +4,7 @@ import Spinner from '../../components/UI/Spinner/Spinner';
 import Product from '../../components/Product/product';
 import * as actions from '../../store/actions/index';
 
-class ProductsList extends Component {
+class Products extends Component {
   componentDidMount () {
     this.props.onFetchProducts (this.props.token);
   }
@@ -41,4 +41,4 @@ const mapDispatchToProps = dispatch => {
     onFetchProducts: token => dispatch (actions.fetchProducts (token)),
   };
 };
-export default connect (mapStateToProps, mapDispatchToProps) (ProductsList);
+export default connect (mapStateToProps, mapDispatchToProps) (Products);

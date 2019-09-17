@@ -6,8 +6,10 @@ import Input from '../../components/UI/Input/Input';
 import Button from '../../components/UI/Button/Button';
 import Spinner from '../../components/UI/Spinner/Spinner';
 
-import ProductList from '../Products/ProductsList';
+//import ProductList from '../Products/ProductsList';
 import * as Styled from './StyledAuth';
+
+import Link from 'next/link';
 
 class Auth extends Component {
   state = {
@@ -45,6 +47,12 @@ class Auth extends Component {
     },
     isSignup: true,
   };
+
+  componentDidMount () {
+    if (this.props.authRedirectPath !== '/') {
+      this.props.onSetAuthRedirectPath ();
+    }
+  }
 
   inputChangedHandler = (event, controlName) => {
     const updatedControls = {
@@ -94,6 +102,9 @@ class Auth extends Component {
       this.props.onError ('Invalid Credentials');
     }
     this.props.onLogin (this.props.token);
+    // Router.push (`/products?store=${props.store}`);
+    // console.log (this.props);
+    //props.store.dispatch (push ('/products'));
   };
 
   switchAuthModeHandler = () => {
@@ -147,21 +158,25 @@ class Auth extends Component {
       errorMessage = <p>{this.props.error}</p>;
     }
 
-    let productsList = null;
+    let authRedirect = null;
     if (this.props.isAuthenticated) {
-      productsList = (
-        <Styled.Auth>
-          <h1>רשימת מוצרים</h1>
-          <ProductList />
-        </Styled.Auth>
-      );
+      authRedirect = <Link to={this.props.authRedirectPath}><a>login</a></Link>;
     }
+    // let productsList = null;
+    // if (this.props.isAuthenticated) {
+    //   productsList = (
+    //     <Styled.Auth>
+    //       <h1>רשימת מוצרים</h1>
+    //       <ProductList />
+    //     </Styled.Auth>
+    //   );
+    // }
 
     return (
       <div>
+        {authRedirect}
         {errorMessage}
         {form}
-        {productsList}
       </div>
     );
   }
@@ -174,6 +189,7 @@ const mapStateToProps = state => {
     isSignup: state.auth.isSignup,
     isAuthenticated: state.auth.token !== null,
     token: state.auth.token,
+    authRedirectPath: state.auth.authRedirectPath,
   };
 };
 
@@ -181,6 +197,7 @@ const mapDispatchToProps = dispatch => {
   return {
     onAuth: (username, password, isSignup) =>
       dispatch (actions.auth (username, password, isSignup)),
+    onSetAuthRedirectPath: () => dispatch (actions.setAuthRedirectPath ('/')),
     onError: error => dispatch (actions.authFail (error)),
     onLogin: token => dispatch (actions.fetchProducts (token)),
   };

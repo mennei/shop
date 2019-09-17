@@ -29,7 +29,7 @@ const fetchProductsFail = (state, action) => {
   });
 };
 
-const reducer = (state = initialState, action) => {
+const productsReducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.FETCH_PRODUCTS_START:
       return fetchProductsStart (state, action);
@@ -42,4 +42,4 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-export default reducer;
+export default productsReducer;

@@ -1,33 +1,49 @@
 import React from 'react';
-import {Provider} from 'react-redux';
-import {createStore, applyMiddleware, compose, combineReducers} from 'redux';
-import thunk from 'redux-thunk';
+import {connect} from 'react-redux';
+import * as actions from '../src/fe/store/actions/index';
 import Layout from '../src/fe/hoc/Layout/Layout';
 import Auth from '../src/fe/containers/Auth/Auth';
-import authReducer from '../src/fe/store/reducers/auth';
-import productsReducer from '../src/fe/store/reducers/products';
+import Products from '../src/fe/containers/Products/Products';
 
-const composeEnhancers =
-  (typeof window != 'undefined' &&
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
-  compose;
+class Index extends React.Component {
+  static getInitialProps({reduxStore, req}) {
+    const isServer = !!req;
+    reduxStore.dispatch (actions.authCheckStateServer (isServer));
+    return {};
+  }
 
-const rootReducer = combineReducers ({
-  auth: authReducer,
-  products: productsReducer,
-});
+  componentDidMount () {
+    this.props.onTryAutoSignup (localStorage);
+  }
 
-const store = createStore (
-  rootReducer,
-  composeEnhancers (applyMiddleware (thunk))
-);
+  render () {
+    let routes = (
+      <Layout>
+        <Auth />
+      </Layout>
+    );
+    if (this.props.isAuthenticated) {
+      routes = (
+        <Layout>
+          <h1 style={{textAlign: 'center'}}>רשימת מוצרים</h1>
+          <Products />
+        </Layout>
+      );
+    }
+    return <div>{routes}</div>;
+  }
+}
 
-const Index = () => (
-  <Provider store={store}>
-    <Layout>
-      <Auth />
-    </Layout>
-  </Provider>
-);
+const mapStateToProps = state => {
+  return {
+    isAuthenticated: state.auth.token !== null,
+  };
+};
 
-export default Index;
+const mapDispatchToProps = dispatch => {
+  return {
+    onTryAutoSignup: localStorage =>
+      dispatch (actions.authCheckState (localStorage)),
+  };
+};
+export default connect (mapStateToProps, mapDispatchToProps) (Index);

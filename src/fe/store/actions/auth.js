@@ -4,6 +4,12 @@ import * as actionTypes from './actionTypes';
 
 const conf = require ('../../../../server.config');
 
+export const authStartServer = () => {
+  return {
+    type: actionTypes.AUTH_STRAT_SERVER,
+  };
+};
+
 export const authStart = () => {
   return {
     type: actionTypes.AUTH_START,
@@ -26,6 +32,9 @@ export const authFail = error => {
 };
 
 export const logout = () => {
+  localStorage.removeItem ('token');
+  localStorage.removeItem ('expirationDate');
+  localStorage.removeItem ('userId');
   return {
     type: actionTypes.AUTH_LOGOUT,
   };
@@ -68,6 +77,12 @@ export const auth = (username, password, isSignup) => {
         tokenPromise.then (
           data => {
             if (data.token || data.userId) {
+              const expirationDate = new Date (
+                new Date ().getTime () + 5 * 1000
+              );
+              localStorage.setItem ('token', data.token);
+              localStorage.setItem ('expirationDate', expirationDate);
+              localStorage.setItem ('userId', data.userId);
               dispatch (authSuccess (data.token, data.userId));
               dispatch (fetchProductsStart (data.token));
               // dispatch (checkAuthTimeout (5));
@@ -85,5 +100,48 @@ export const auth = (username, password, isSignup) => {
         console.log (err);
         dispatch (authFail (err));
       });
+  };
+};
+
+export const setAuthRedirectPath = path => {
+  return {
+    type: actionTypes.SET_AUTH_REDIRECT_PATH,
+    path: path,
+  };
+};
+
+export const authCheckState = localStorage => {
+  return dispatch => {
+    if (localStorage.length === 0) {
+      dispatch (authStartServer ());
+    }
+    const token = localStorage.getItem ('token');
+    if (!token) {
+      // dispatch (logout ());
+    } else {
+      const expirationDate = new Date (localStorage.getItem ('expirationDate'));
+      if (expirationDate <= new Date ()) {
+        dispatch (logout ());
+      } else {
+        const userId = localStorage.getItem ('userId');
+        dispatch (authSuccess (token, userId));
+        // dispatch (
+        //   checkAuthTimeout (
+        //     (expirationDate.getTime () - new Date ().getTime ()) / 1000
+        //   )
+        // );
+      }
+    }
+  };
+};
+
+export const authCheckStateServer = isServer => {
+  console.log (isServer);
+  return dispatch => {
+    if (isServer) {
+      dispatch (authStartServer ());
+    } else {
+      dispatch (authFail ('isServer in not valid'));
+    }
   };
 };
