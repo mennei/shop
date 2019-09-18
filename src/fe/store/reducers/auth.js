@@ -8,8 +8,12 @@ const initialState = {
   loading: false,
 };
 
+const authStartServer = (state, action) => {
+  return updateObject (state, {error: null, loading: false});
+};
+
 const authStart = (state, action) => {
-  return updateObject (state, {error: null, loading: true});
+  return updateObject (state, {error: null, loading: false});
 };
 
 const authSuccess = (state, action) => {
@@ -32,8 +36,10 @@ const authLogout = (state, action) => {
   return updateObject (state, {token: null});
 };
 
-const reducer = (state = initialState, action) => {
+const authReducer = (state = initialState, action) => {
   switch (action.type) {
+    case actionTypes.AUTH_CHECK_STATE_SERVER:
+      return authStartServer (state, action);
     case actionTypes.AUTH_START:
       return authStart (state, action);
     case actionTypes.AUTH_SUCCESS:
@@ -47,4 +53,4 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-export default reducer;
+export default authReducer;
