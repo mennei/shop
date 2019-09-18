@@ -25,7 +25,7 @@ class Index extends React.Component {
     if (this.props.isAuthenticated) {
       routes = (
         <Layout>
-          <h1 style={{textAlign: 'center'}}>רשימת מוצרים</h1>
+          
           <Products />
         </Layout>
       );

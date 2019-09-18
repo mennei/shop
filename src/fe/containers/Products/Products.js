@@ -22,7 +22,8 @@ class Products extends Component {
     }
     return (
       <div>
-        {products}
+        <h1 style={{textAlign: 'center'}}>רשימת מוצרים</h1>
+        <div>{products}</div>
       </div>
     );
   }
