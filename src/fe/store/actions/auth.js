@@ -1,12 +1,14 @@
 import fetch from 'isomorphic-unfetch';
-
 import * as actionTypes from './actionTypes';
+import Router from 'next/router';
 
 const conf = require ('../../../../server.config');
 
 export const authStartServer = () => {
   return {
     type: actionTypes.AUTH_STRAT_SERVER,
+    idToken: null,
+    userId: null,
   };
 };
 
@@ -85,7 +87,10 @@ export const auth = (username, password, isSignup) => {
               localStorage.setItem ('userId', data.userId);
               dispatch (authSuccess (data.token, data.userId));
               dispatch (fetchProductsStart (data.token));
-              // dispatch (checkAuthTimeout (5));
+              Router.push ({
+                pathname: '/products',
+                query: {token: data.token, list: []},
+              });
             } else {
               dispatch (authFail ('Invalid username'));
             }
@@ -100,13 +105,6 @@ export const auth = (username, password, isSignup) => {
         console.log (err);
         dispatch (authFail (err));
       });
-  };
-};
-
-export const setAuthRedirectPath = path => {
-  return {
-    type: actionTypes.SET_AUTH_REDIRECT_PATH,
-    path: path,
   };
 };
 
@@ -136,12 +134,11 @@ export const authCheckState = localStorage => {
 };
 
 export const authCheckStateServer = isServer => {
-  console.log (isServer);
   return dispatch => {
-    if (isServer) {
-      dispatch (authStartServer ());
-    } else {
-      dispatch (authFail ('isServer in not valid'));
-    }
+    // if (isServer) {
+    dispatch (authStartServer ());
+    // } else {
+    // dispatch (authFail ('isServer in not valid'));
+    // }
   };
 };

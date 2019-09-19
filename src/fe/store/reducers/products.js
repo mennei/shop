@@ -29,6 +29,16 @@ const fetchProductsFail = (state, action) => {
   });
 };
 
+const cartStart = (state, action) => {
+  return updateObject (state, {
+    token: action.idToken,
+    list: [],
+    name: '',
+    price: 0,
+    total: 0,
+  });
+};
+
 const productsReducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.FETCH_PRODUCTS_START:
@@ -37,6 +47,8 @@ const productsReducer = (state = initialState, action) => {
       return fetchProductsSuccess (state, action);
     case actionTypes.FETCH_PRODUCTS_FAIL:
       return fetchProductsFail (state, action);
+    case actionTypes.CART_START:
+      return cartStart (state, action);
     default:
       return state;
   }

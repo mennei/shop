@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../src/fe/store/actions/index';
+import Header from '../src/fe/components/Header/header';
 import Layout from '../src/fe/hoc/Layout/Layout';
 import Auth from '../src/fe/containers/Auth/Auth';
 import Products from '../src/fe/containers/Products/Products';
@@ -17,20 +18,19 @@ class Index extends React.Component {
   }
 
   render () {
-    let routes = (
-      <Layout>
-        <Auth />
-      </Layout>
-    );
-    if (this.props.isAuthenticated) {
-      routes = (
-        <Layout>
-          
-          <Products />
-        </Layout>
-      );
-    }
-    return <div>{routes}</div>;
+    // let routes = (
+    //   <Layout>
+    //     <Auth />
+    //   </Layout>
+    // );
+    // if (this.props.isAuthenticated) {
+    //   routes = (
+    //     <Layout>
+    //       <Header isAuthenticated={this.props.isAuthenticated}/>
+    //     </Layout>
+    //   );
+    // }
+    return <Header isAuthenticated={this.props.isAuthenticated} />;
   }
 }
 

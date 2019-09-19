@@ -36,6 +36,18 @@ const authLogout = (state, action) => {
   return updateObject (state, {token: null});
 };
 
+const fetchProductsStart = (state, action) => {
+  return updateObject (state, {token: action.token});
+};
+
+// const setAuthRedirectPath = (state, action) => {
+//   return updateObject (state, {
+//     token: action.idToken,
+//     userId: action.userId,
+//     path: action.path,
+//   });
+// };
+
 const authReducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.AUTH_CHECK_STATE_SERVER:
@@ -48,6 +60,10 @@ const authReducer = (state = initialState, action) => {
       return authFail (state, action);
     case actionTypes.AUTH_LOGOUT:
       return authLogout (state, action);
+    case actionTypes.FETCH_PRODUCTS_START:
+      return fetchProductsStart (state, action);
+    // case actionTypes.SET_AUTH_REDIRECT_PATH:
+    //   return setAuthRedirectPath (state, action);
     default:
       return state;
   }

@@ -1,5 +1,4 @@
 import fetch from 'isomorphic-unfetch';
-
 import * as actionTypes from './actionTypes';
 
 const conf = require ('../../../../server.config');
@@ -19,10 +18,23 @@ export const fetchProductsSuccess = (idToken, products) => {
   };
 };
 
+export const cartStart = (idToken, products) => {
+  return {
+    type: actionTypes.CART_START,
+    token: idToken,
+    list: products,
+    name: '',
+    price: 0,
+    total: 0,
+  };
+};
+
 export const fetchProducts = token => {
   return dispatch => {
     if (!token) {
-      return dispatch (fetchProductsFail ('Invalid token'));
+      return dispatch (
+        fetchProductsFail ('Invalid token when fetching products')
+      );
     }
     const url = `${conf.BASE_API_PATH}product/getProductsList?token=${token}`;
     fetch (url, {method: 'get'})
@@ -31,6 +43,7 @@ export const fetchProducts = token => {
         listPromise.then (
           data => {
             let list = data.productsList;
+            // dispatch (cartStart (token, list));
             dispatch (fetchProductsSuccess (token, list));
           },
           err => {
