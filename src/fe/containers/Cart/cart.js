@@ -1,12 +1,21 @@
 import React, {Component} from 'react';
+import {compose} from 'redux';
 import {connect} from 'react-redux';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import Product from '../../components/Product/product';
 import * as actions from '../../store/actions/index';
+import {withRouter} from 'next/router';
 
 class Cart extends Component {
   componentDidMount () {
-    this.props.onFetchCart (this.props.token);
+    const {router, token} = this.props;
+    console.log (router);
+    let activeToken = token
+      ? token
+      : router && router.query && router.query.token
+          ? router.query.token
+          : null;
+    this.props.onFetchCart (activeToken);
   }
   render () {
     let products = <Spinner />;
@@ -41,4 +50,7 @@ const mapDispatchToProps = dispatch => {
     onFetchCart: token => dispatch (actions.fetchCart (token)),
   };
 };
-export default connect (mapStateToProps, mapDispatchToProps) (Cart);
+export default compose (
+  withRouter,
+  connect (mapStateToProps, mapDispatchToProps)
+) (Cart);

@@ -1,26 +1,26 @@
 import Link from 'next/link';
-import Products from '../../containers/Products/Products';
+import * as Styled from './StyledHeader';
 
 const Header = props => {
   console.log (props);
   return (
-    <header>
-      <ul>
+    <Styled.Header>
+      <Styled.UL>
         <li>
           <Link href="/">
-            <a>Home</a>
+            <a>דף הבית</a>
           </Link>
         </li>
         <li>
           <Link href="/about">
-            <a>About Page</a>
+            <a>אודות החנות</a>
           </Link>
         </li>
         <li>
-          <Link href="/auth"><a>login</a></Link>
+          <Link href="/auth"><a>כניסה</a></Link>
         </li>
-      </ul>
-    </header>
+      </Styled.UL>
+    </Styled.Header>
   );
 };
 

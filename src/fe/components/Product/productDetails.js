@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-// import {connect} from 'react-redux';
-// import * as actions from '../../store/actions/index';
 import Link from 'next/link';
 import * as Styled from '../../containers/Auth/StyledAuth';
 import {Button} from '../UI/Button/StyledButton';
