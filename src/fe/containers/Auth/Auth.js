@@ -126,6 +126,12 @@ class Auth extends Component {
       />
     ));
 
+    let errorMessage = null;
+
+    if (this.props.error) {
+      errorMessage = <p style={{color: 'red'}}>{this.props.error}</p>;
+    }
+
     if (this.props.loading) {
       form = <Spinner />;
     }
@@ -135,23 +141,20 @@ class Auth extends Component {
         <Styled.Auth>
           <form onSubmit={this.submitHandler}>
             {form}
-            <Button btnType="Success">SUBMIT</Button>
+            <Button btnType="Success">שלח</Button>
           </form>
           <Button clicked={this.switchAuthModeHandler} btnType="Danger">
-            SWITCH TO {this.state.isSignup ? 'SIGN IN' : 'SIGN UP'}
+            {this.state.isSignup
+              ? 'משתמש רשום הזן פרטים לחץ ושלח'
+              : 'לרישום לחץ הזן פרטים ושלח'}
           </Button>
+          {errorMessage}
         </Styled.Auth>
       );
-    }
-    let errorMessage = null;
-
-    if (this.props.error) {
-      errorMessage = <p>{this.props.error}</p>;
     }
 
     return (
       <div>
-        {errorMessage}
         {form}
       </div>
     );

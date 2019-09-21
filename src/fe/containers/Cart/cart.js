@@ -5,6 +5,7 @@ import Spinner from '../../components/UI/Spinner/Spinner';
 import Product from '../../components/Product/product';
 import * as actions from '../../store/actions/index';
 import {withRouter} from 'next/router';
+import * as Styled from '../Auth/StyledAuth';
 
 class Cart extends Component {
   componentDidMount () {
@@ -20,19 +21,21 @@ class Cart extends Component {
   render () {
     let products = <Spinner />;
     if (!this.props.loading) {
-      products = this.props.list.map (product => {
-        const {productHebName, price} = product;
-        <Product key={product._id} name={productHebName} price={price} />;
-      });
+      products =
+        this.props.list &&
+        this.props.list.map (product => {
+          const {productHebName, price} = product;
+          <Product key={product._id} name={productHebName} price={price} />;
+        });
     }
-    if (products.length > 0) {
+    if (!this.props.list || this.props.list.length === 0) {
       products = <div>העגלה ריקה</div>;
     }
     return (
-      <div>
-        <h1 style={{textAlign: 'center'}}>העגלה שלי</h1>
+      <Styled.Auth>
+        <h1>העגלה שלי</h1>
         <div>{products}</div>
-      </div>
+      </Styled.Auth>
     );
   }
 }

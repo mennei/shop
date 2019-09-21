@@ -11,8 +11,7 @@ router.route ('/getProductsList').get (async (req, res) => {
     console.log ('Error while route /product path in product.route.js');
     const errCode = error.code || 500;
     const errMessage =
-      error.message ||
-      `Error in route getProductsList ${conf.BASE_API_PATH}product`;
+      error || `Error in route getProductsList ${conf.BASE_API_PATH}product`;
     res.status (errCode).json ({err: errMessage});
   }
 });

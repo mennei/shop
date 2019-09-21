@@ -7,6 +7,10 @@ const routes = [
     name: 'product',
     source: require ('./product/product.routes.js'),
   },
+  {
+    name: 'cart',
+    source: require ('./cart/cart.routes.js'),
+  },
 ];
 
 module.exports = routes;

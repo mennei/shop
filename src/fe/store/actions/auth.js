@@ -92,7 +92,7 @@ export const auth = (username, password, isSignup) => {
                 query: {token: data.token, list: []},
               });
             } else {
-              dispatch (authFail ('Invalid username'));
+              dispatch (authFail (data.err));
             }
           },
           err => {

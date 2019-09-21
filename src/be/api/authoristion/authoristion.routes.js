@@ -47,8 +47,7 @@ router.route ('/doSignup').post (async (req, res) => {
     );
     const errCode = error.code || 500;
     const errMessage =
-      error.message ||
-      `Error in route signup ${conf.BASE_API_PATH}authoristion`;
+      error || `Error in route signup ${conf.BASE_API_PATH}authoristion`;
     res.status (errCode).json ({err: errMessage});
   }
 });
