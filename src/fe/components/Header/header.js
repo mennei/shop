@@ -2,7 +2,6 @@ import Link from 'next/link';
 import * as Styled from './StyledHeader';
 
 const Header = props => {
-  console.log (props);
   return (
     <Styled.Header>
       <Styled.UL>

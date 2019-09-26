@@ -1,5 +1,5 @@
 const router = require ('express').Router ();
-const {getCart} = require ('./cart.service');
+const {getCart, checkout} = require ('./cart.service');
 const conf = require ('../../../../server.config');
 
 router.route ('/getCart').get (async (req, res) => {
@@ -15,4 +15,19 @@ router.route ('/getCart').get (async (req, res) => {
     res.status (errCode).json ({err: errMessage});
   }
 });
+
+router.route ('/checkout').post (async (req, res) => {
+  try {
+    console.log ('[cart.route.js] in checkout route');
+    const response = await checkout (req);
+    res.status (200).send ({cart: response});
+  } catch (error) {
+    console.log ('Error while route /cart path in cart.route.js');
+    const errCode = error.code || 500;
+    const errMessage =
+      error || `Error in route signup ${conf.BASE_API_PATH}cart`;
+    res.status (errCode).json ({err: errMessage});
+  }
+});
+
 module.exports = router;

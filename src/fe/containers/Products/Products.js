@@ -3,13 +3,14 @@ import {compose} from 'redux';
 import {connect} from 'react-redux';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import Product from '../../components/Product/product';
+import * as Styled from '../../containers/Auth/StyledAuth';
 import * as actions from '../../store/actions/index';
+import Link from 'next/link';
 import {withRouter} from 'next/router';
 
 class Products extends Component {
   componentDidMount () {
     const {router, token} = this.props;
-    // console.log (router);
     let activeToken = token
       ? token
       : router && router.query && router.query.token
@@ -21,18 +22,30 @@ class Products extends Component {
   render () {
     let products = <Spinner />;
     if (!this.props.loading) {
-      products = this.props.list.map (product => {
-        const {productHebName, price} = product;
+      products = this.props.list.map (dbProduct => {
+        const {productHebName, price, _id} = dbProduct;
         return (
-          <div>
+          <Styled.Auth key={_id}>
             <Product
-              key={product._id}
               name={productHebName}
               price={price}
               token={this.props.token}
               list={this.props.list}
             />
-          </div>
+            <Link
+              href={{
+                pathname: '/cart',
+                query: {
+                  name: this.props.router.query.name,
+                  price: this.props.router.query.price,
+                  token: this.props.router.query.token,
+                  list: this.props.list,
+                },
+              }}
+            >
+              <a>צפייה בסל</a>
+            </Link>
+          </Styled.Auth>
         );
       });
     }
@@ -49,7 +62,9 @@ const mapStateToProps = state => {
   return {
     list: state.products.list,
     loading: state.products.loading,
-    token: state.auth.token,
+    token: state.products.token,
+    myCart: state.cart.myCart,
+    total: state.cart.total,
   };
 };
 

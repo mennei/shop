@@ -14,7 +14,7 @@ const fetchProductsStart = state => {
 
 const fetchProductsSuccess = (state, action) => {
   return updateObject (state, {
-    token: action.idToken,
+    token: action.token,
     error: null,
     loading: false,
     list: action.list,

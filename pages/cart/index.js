@@ -2,7 +2,6 @@ import React from 'react';
 import Cart from '../../src/fe/containers/Cart/cart';
 
 const CartView = ({query}) => {
-  console.log (query);
   const {name, price, token, list} = query;
   return <Cart name={name} price={price} token={token} list={list} />;
 };

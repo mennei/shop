@@ -44,10 +44,6 @@ class Auth extends Component {
     isSignup: true,
   };
 
-  componentDidMount () {
-    console.log (this.props);
-  }
-
   inputChangedHandler = (event, controlName) => {
     const updatedControls = {
       ...this.state.controls,

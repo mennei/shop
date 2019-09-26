@@ -1,19 +1,18 @@
 import * as actionTypes from '../actions/actionTypes';
 import {updateObject} from '../utility';
-import {cartStart} from '../actions/products';
 
 const initialState = {
   token: null,
   error: null,
   loading: false,
-  list: [],
+  myCart: [],
   name: '',
   price: 0,
   total: 0,
 };
 
 const fetchCartStart = state => {
-  return updateObject (state, {error: null, loading: true, list: []});
+  return updateObject (state, {error: null, loading: true, myCart: []});
 };
 
 const fetchCartSuccess = (state, action) => {
@@ -21,7 +20,7 @@ const fetchCartSuccess = (state, action) => {
     token: action.idToken,
     error: null,
     loading: false,
-    list: action.list,
+    myCart: action.myCart,
   });
 };
 
@@ -29,7 +28,56 @@ const fetchCartFail = (state, action) => {
   return updateObject (state, {
     error: action.error,
     loading: false,
-    list: [],
+    myCart: [],
+  });
+};
+
+const addToCartFail = (state, action) => {
+  return updateObject (state, {
+    error: action.error,
+    error: null,
+    loading: false,
+    myCart: action.myCart,
+    name: action.name,
+    price: action.price,
+    total: action.total,
+  });
+};
+
+const addToCartSuccess = (state, action) => {
+  return updateObject (state, {
+    token: action.idToken,
+    error: null,
+    loading: false,
+  });
+};
+
+// const removeFromCartFail = (state, action) => {
+//   return updateObject (state, {
+//     error: action.error,
+//     error: null,
+//     loading: false,
+//     myCart: [],
+//   });
+// };
+
+// const removeFromCartSuccess = (state, action) => {
+//   return updateObject (state, {
+//     token: action.idToken,
+//     error: null,
+//     loading: false,
+//     myCart: action.myCart,
+//   });
+// };
+
+const storeResult = (state, action) => {
+  return updateObject (state, {
+    myCart: state.myCart.concat ({
+      id: new Date (),
+      name: action.productName,
+      price: action.productPrice,
+    }),
+    total: state.total + action.productPrice,
   });
 };
 
@@ -41,6 +89,19 @@ const cartReducer = (state = initialState, action) => {
       return fetchCartSuccess (state, action);
     case actionTypes.FETCH_CART_FAIL:
       return fetchCartFail (state, action);
+    case actionTypes.ADD_TO_CART_FAIL:
+      return addToCartFail (state, action);
+    case actionTypes.ADD_TO_CART_SUCCESS:
+      return addToCartSuccess (state, action);
+    case actionTypes.REMOVE_FROM_CART_FAIL:
+      return removeFromCartFail (state, action);
+    case actionTypes.REMOVE_FROM_CART_SUCCESS:
+      return removeFromCartSuccess (state, action);
+    case actionTypes.FETCH_CART_FAIL:
+      return fetchCartFail (state, action);
+    case actionTypes.STORE_RESULT:
+      return storeResult (state, action);
+    case actionTypes.DELETE_RESULT:
     default:
       return state;
   }

@@ -1,18 +1,69 @@
-import React from 'react';
-import * as Styled from '../../containers/Auth/StyledAuth';
+import React, {Component} from 'react';
+import {compose} from 'redux';
+import {connect} from 'react-redux';
+import * as actions from '../../store/actions/index';
+import {withRouter} from 'next/router';
 import Link from 'next/link';
+import Button from '../../components/UI/Button/Button';
 
-const product = props => {
-  console.log (props);
-  return (
-    <Styled.Auth>
-      {props.name}
+class Product extends Component {
+  handleClick = e => {
+    e.preventDefault ();
+    const {token, myCart, name, price, total} = this.props;
+    this.props.onAddToCart (e, token, myCart, name, price, total);
+  };
+
+  render () {
+    return (
       <div>
-        מחיר: <strong>{Number.parseFloat (props.price).toFixed (2)} ש"ח</strong>
+        {this.props.name}
+        <div>
+          מחיר:
+          {' '}
+          <strong>
+            {Number.parseFloat (this.props.price).toFixed (2)} ש"ח
+          </strong>
+        </div>
+        {' '}
+        <Button btnType="Success" clicked={e => this.handleClick (e)}>
+          הוסף לסל
+        </Button>
+        <Link
+          href={{
+            pathname: '/products/[id]/product',
+            query: {
+              name: this.props.name,
+              price: this.props.price,
+              // token: props.token,
+              // list: this.props.list,
+            },
+          }}
+        >
+          <a>דף פרטי מוצר</a>
+        </Link>
       </div>
-      <Link href={{ pathname: '/products/[id]/product', query: { name: props.name, price: props.price, token: props.token, list: props.list } }}><a>דף פרטי מוצר</a></Link>
-    </Styled.Auth>
-  );
+    );
+  }
+}
+const mapStateToProps = state => {
+  return {
+    list: state.products.list,
+    loading: state.products.loading,
+    token: state.products.token,
+    myCart: state.cart.myCart,
+    total: state.cart.total,
+  };
 };
 
-export default product;
+const mapDispatchToProps = dispatch => {
+  return {
+    onAddToCart: (e, token, myCart, name, price, total) => {
+      dispatch (actions.addToCart (e, token, myCart, name, price, total));
+    },
+  };
+};
+
+export default compose (
+  withRouter,
+  connect (mapStateToProps, mapDispatchToProps)
+) (Product);

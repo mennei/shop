@@ -1,3 +1,3 @@
 export {auth, authFail, authCheckState, authCheckStateServer} from './auth';
 export {fetchProducts} from './products';
-export {fetchCart, addItemToCart} from './cart';
+export {fetchCart, addToCart, storeResult} from './cart';

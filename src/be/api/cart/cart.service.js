@@ -14,4 +14,16 @@ const getCart = async req => {
   return cart;
 };
 
-module.exports = {getCart};
+const checkout = async req => {
+  console.log ('[cart.service.js] in addItemsToCart service');
+  const items = await repository.checkout (req.body);
+  console.log (
+    '[cart.service.js] in addItemsToCart service after repository.getCart'
+  );
+  if (!items) {
+    return null;
+  }
+  return items;
+};
+
+module.exports = {getCart, checkout};
