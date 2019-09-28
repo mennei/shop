@@ -12,29 +12,14 @@ export const fetchCartFail = error => {
   };
 };
 
-export const fetchCartSuccess = (idToken, products) => {
+export const fetchCartSuccess = (idToken, products, unsaveCart) => {
   return {
     type: actionTypes.FETCH_CART_SUCCESS,
     token: idToken,
-    myCart: products,
+    list: products,
+    myCart: unsaveCart,
   };
 };
-
-// export const removeFromCartFail = error => {
-//   return {
-//     type: actionTypes.REMOVE_FROM_CART_FAIL,
-//     error: error,
-//   };
-// };
-
-// export const removeFromCartSuccess = (idToken, products, totalCart) => {
-//   return {
-//     type: actionTypes.REMOVE_FROM_CART_SUCCESS,
-//     token: idToken,
-//     list: products,
-//     total: totalCart,
-//   };
-// };
 
 // export const fetchCheckoutStart = () => {
 //   return {
@@ -59,7 +44,7 @@ export const fetchCartSuccess = (idToken, products) => {
 //   };
 // };
 
-export const fetchCart = token => {
+export const fetchCart = (token, myCart, total) => {
   return dispatch => {
     if (!token) {
       return dispatch (fetchCartFail ('Invalid token when fetching cart'));
@@ -71,7 +56,8 @@ export const fetchCart = token => {
         listPromise.then (
           data => {
             let list = data.cart;
-            dispatch (fetchCartSuccess (token, list));
+            dispatch (cartStart (token, list, myCart, total));
+            dispatch (fetchCartSuccess (token, list, myCart, total));
           },
           err => {
             dispatch (fetchCartFail (err));
@@ -104,13 +90,12 @@ export const addToCartSuccess = (
   };
 };
 
-export const storeResult = (name, price, list, total) => {
+export const storeResult = (name, price, list) => {
   return {
     type: actionTypes.STORE_RESULT,
     productName: name,
     productPrice: price,
     myCart: list,
-    totalCart: total,
   };
 };
 
@@ -122,31 +107,47 @@ export const addToCart = (e, token, myCart, name, price, total) => {
       dispatch (cartStart (token, myCart));
       dispatch (addToCartSuccess (token, myCart, name, price));
       dispatch (storeResult (name, price, myCart, total));
-      dispatch (fetchProducts (token));
+      dispatch (fetchProducts (token, myCart));
     }
   };
 };
 
-// export const removeFormCart = (token, list, itemId) => {
-//   return dispatch => {
-//     if (!token) {
-//       return dispatch (
-//         removeToCartFail ('Invalid token when remove item from cart')
-//       );
-//     } else {
-//       if (!itemId) {
-//         list.splice (itemId);
-//         let total = 0;
-//         for (let item in list) {
-//           total += item.price;
-//         }
-//         return dispatch (removeFromCartSuccess (token, list, total));
-//       } else {
-//         return dispatch (removeToCartFail ('itemId is null'));
-//       }
-//     }
-//   };
-// };
+export const removeFromCartFail = error => {
+  return {
+    type: actionTypes.REMOVE_FROM_CART_FAIL,
+    error: error,
+  };
+};
+
+export const removeFromCartSuccess = (idToken, products) => {
+  return {
+    type: actionTypes.REMOVE_FROM_CART_SUCCESS,
+    token: idToken,
+    myCart: products,
+  };
+};
+
+export const deleteResult = (name, price, list) => {
+  return {
+    type: actionTypes.DELETE_RESULT,
+    productName: name,
+    productPrice: price,
+    myCart: list,
+  };
+};
+
+export const removeFromCart = (e, token, myCart, name, price, total) => {
+  return dispatch => {
+    if (!token) {
+      return dispatch (
+        removeToCartFail ('Invalid token when remove item from cart')
+      );
+    }
+    dispatch (removeFromCartSuccess (token, myCart, total));
+    dispatch (deleteResult (name, price, myCart));
+    dispatch (fetchProducts (token));
+  };
+};
 
 // export const checkout = (token, list, total) => {
 //   return dispatch => {

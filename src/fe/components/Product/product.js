@@ -7,10 +7,16 @@ import Link from 'next/link';
 import Button from '../../components/UI/Button/Button';
 
 class Product extends Component {
-  handleClick = e => {
+  handleAddClick = e => {
     e.preventDefault ();
     const {token, myCart, name, price, total} = this.props;
     this.props.onAddToCart (e, token, myCart, name, price, total);
+  };
+
+  handleRemoveClick = e => {
+    e.preventDefault ();
+    const {token, myCart, price, total} = this.props;
+    this.props.onRemoveFromCart (e, token, myCart, name, price, total);
   };
 
   render () {
@@ -25,8 +31,11 @@ class Product extends Component {
           </strong>
         </div>
         {' '}
-        <Button btnType="Success" clicked={e => this.handleClick (e)}>
+        <Button btnType="Success" clicked={e => this.handleAddClick (e)}>
           הוסף לסל
+        </Button>
+        <Button btnType="Success" clicked={e => this.handleRemoveClick (e)}>
+          הורד מהסל
         </Button>
         <Link
           href={{
@@ -59,6 +68,9 @@ const mapDispatchToProps = dispatch => {
   return {
     onAddToCart: (e, token, myCart, name, price, total) => {
       dispatch (actions.addToCart (e, token, myCart, name, price, total));
+    },
+    onRemoveFromCart: (e, token, myCart, name, price, total) => {
+      dispatch (actions.removeFromCart (e, token, myCart, name, price, total));
     },
   };
 };

@@ -35,12 +35,6 @@ const fetchCartFail = (state, action) => {
 const addToCartFail = (state, action) => {
   return updateObject (state, {
     error: action.error,
-    error: null,
-    loading: false,
-    myCart: action.myCart,
-    name: action.name,
-    price: action.price,
-    total: action.total,
   });
 };
 
@@ -48,27 +42,20 @@ const addToCartSuccess = (state, action) => {
   return updateObject (state, {
     token: action.idToken,
     error: null,
-    loading: false,
   });
 };
 
-// const removeFromCartFail = (state, action) => {
-//   return updateObject (state, {
-//     error: action.error,
-//     error: null,
-//     loading: false,
-//     myCart: [],
-//   });
-// };
+const removeFromCartFail = (state, action) => {
+  return updateObject (state, {
+    error: action.error,
+  });
+};
 
-// const removeFromCartSuccess = (state, action) => {
-//   return updateObject (state, {
-//     token: action.idToken,
-//     error: null,
-//     loading: false,
-//     myCart: action.myCart,
-//   });
-// };
+const removeFromCartSuccess = (state, action) => {
+  return updateObject (state, {
+    token: action.idToken,
+  });
+};
 
 const storeResult = (state, action) => {
   return updateObject (state, {
@@ -78,6 +65,17 @@ const storeResult = (state, action) => {
       price: action.productPrice,
     }),
     total: state.total + action.productPrice,
+  });
+};
+
+const deleteResult = (state, action) => {
+  return updateObject (state, {
+    myCart: state.myCart.filter (
+      product =>
+        product.name !== action.productName &&
+        product.price !== action.productPrice
+    ),
+    total: state.total - action.productPrice,
   });
 };
 
@@ -102,6 +100,7 @@ const cartReducer = (state = initialState, action) => {
     case actionTypes.STORE_RESULT:
       return storeResult (state, action);
     case actionTypes.DELETE_RESULT:
+      return deleteResult (state, action);
     default:
       return state;
   }

@@ -10,26 +10,32 @@ export const fetchProductsFail = error => {
   };
 };
 
-export const fetchProductsSuccess = (idToken, products) => {
+export const fetchProductsSuccess = (
+  idToken,
+  dbProducts,
+  unsaveCart,
+  totalCart
+) => {
   return {
     type: actionTypes.FETCH_PRODUCTS_SUCCESS,
     token: idToken,
-    list: products,
+    list: dbProducts,
+    myCart: unsaveCart,
+    total: totalCart,
   };
 };
 
-export const cartStart = (idToken, products) => {
+export const cartStart = (idToken, products, unsaveCart, totalCart) => {
   return {
     type: actionTypes.CART_START,
     token: idToken,
     list: products,
-    name: '',
-    price: 0,
-    total: 0,
+    myCart: unsaveCart,
+    total: totalCart,
   };
 };
 
-export const fetchProducts = token => {
+export const fetchProducts = (token, myCart, total) => {
   return dispatch => {
     if (!token) {
       return dispatch (
@@ -42,9 +48,9 @@ export const fetchProducts = token => {
         let listPromise = response.json ();
         listPromise.then (
           data => {
-            let list = data.productsList;
-            // dispatch (cartStart (token, list));
-            dispatch (fetchProductsSuccess (token, list));
+            let dbList = data.productsList;
+            dispatch (cartStart (token, dbList, myCart, total));
+            dispatch (fetchProductsSuccess (token, dbList, myCart, total));
           },
           err => {
             console.log (err);

@@ -10,18 +10,18 @@ import {withRouter} from 'next/router';
 
 class Products extends Component {
   componentDidMount () {
-    const {router, token} = this.props;
+    const {router, token, myCart, total} = this.props;
     let activeToken = token
       ? token
       : router && router.query && router.query.token
           ? router.query.token
           : null;
-    this.props.onFetchProducts (activeToken);
+    this.props.onFetchProducts (activeToken, myCart, total);
   }
 
   render () {
     let products = <Spinner />;
-    if (!this.props.loading) {
+    if (!this.props.loading && this.props.list) {
       products = this.props.list.map (dbProduct => {
         const {productHebName, price, _id} = dbProduct;
         return (
@@ -36,10 +36,8 @@ class Products extends Component {
               href={{
                 pathname: '/cart',
                 query: {
-                  name: this.props.router.query.name,
-                  price: this.props.router.query.price,
-                  token: this.props.router.query.token,
-                  list: this.props.list,
+                  token: this.props.token,
+                  myCart: this.props.myCart,
                 },
               }}
             >
@@ -70,7 +68,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onFetchProducts: token => dispatch (actions.fetchProducts (token)),
+    onFetchProducts: (token, myCart, total) =>
+      dispatch (actions.fetchProducts (token, myCart, total)),
   };
 };
 
