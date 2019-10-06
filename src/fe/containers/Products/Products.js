@@ -36,7 +36,7 @@ class Products extends Component {
               href={{
                 pathname: '/cart',
                 query: {
-                  token: this.props.token,
+                  // token: this.props.token,
                   myCart: this.props.myCart,
                 },
               }}

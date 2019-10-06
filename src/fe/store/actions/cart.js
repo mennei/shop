@@ -47,6 +47,9 @@ export const fetchCartSuccess = (idToken, products, unsaveCart) => {
 export const fetchCart = (token, myCart, total) => {
   return dispatch => {
     if (!token) {
+      token = localStorage.getItem ('token');
+    }
+    if (!token) {
       return dispatch (fetchCartFail ('Invalid token when fetching cart'));
     }
     const url = `${conf.BASE_API_PATH}cart/getCart`;

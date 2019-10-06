@@ -89,7 +89,7 @@ export const auth = (username, password, isSignup) => {
               dispatch (fetchProductsStart (data.token));
               Router.push ({
                 pathname: '/products',
-                query: {token: data.token, list: []},
+                query: {list: []},
               });
             } else {
               dispatch (authFail (data.err));
