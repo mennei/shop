@@ -66,3 +66,12 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### Special notes for Sela task
+
+1. This project is about to show my abilities in nodejs, react, redux and nextjs.
+2. Take a look in the requirement document.
+3. The search and filter products list was implement on client side only. In the
+    next versions, it may add the 'admin' user that can manage the list that exist in DB, from nice UI.
+4. I use resources from udemy and stack over flow web sites, thanks for them.
+5. The task is full support with hebrew.
