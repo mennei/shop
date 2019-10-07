@@ -7,8 +7,27 @@ import * as Styled from '../../containers/Auth/StyledAuth';
 import * as actions from '../../store/actions/index';
 import Link from 'next/link';
 import {withRouter} from 'next/router';
+import Input from '../../components/UI/Input/Input';
 
 class Products extends Component {
+  state = {
+    search: {
+      elementType: 'input',
+      elementConfig: {
+        type: 'text',
+        placeholder: 'הקלד לחיפוש מוצר',
+      },
+      value: '',
+      validation: {
+        isHebChars: true,
+      },
+      valid: false,
+      touched: false,
+      label: 'Please type your search',
+      filter: [...this.props.list],
+    },
+  };
+
   componentDidMount () {
     const {router, token, myCart, total} = this.props;
     let activeToken = token
@@ -19,10 +38,47 @@ class Products extends Component {
     this.props.onFetchProducts (activeToken, myCart, total);
   }
 
+  handleChangeSearch = e => {
+    const updatedControl = {
+      ...this.state.search,
+      value: e.target.value,
+      valid: this.checkValidity (e.target.value, this.state.search.validation),
+      touched: true,
+      filter: this.doFilter (e.target.value),
+    };
+    this.setState ({search: updatedControl});
+  };
+
+  checkValidity (value, rules) {
+    let isValid = true;
+    if (!rules) {
+      return true;
+    }
+    if (rules.isHebChars) {
+      isValid = /^[ אבגדהוזחטיכלמנסעמצפקרשתףץןם]+$/.test (value) && isValid;
+    }
+    return isValid;
+  }
+
+  doFilter (value) {
+    let currentList = [...this.props.list];
+    let newList = [...this.props.list];
+    if (value !== '') {
+      newList = currentList.filter (item =>
+        item.productHebName.includes (value)
+      );
+    } else {
+      newList = [...this.props.list];
+    }
+    console.log (newList);
+    return newList;
+  }
+
   render () {
     let products = <Spinner />;
     if (!this.props.loading && this.props.list) {
-      products = this.props.list.map (dbProduct => {
+      console.log (this.state.search.filter);
+      products = this.state.search.filter.map (dbProduct => {
         const {productHebName, price, _id} = dbProduct;
         return (
           <Styled.Auth key={_id}>
@@ -36,7 +92,6 @@ class Products extends Component {
               href={{
                 pathname: '/cart',
                 query: {
-                  // token: this.props.token,
                   myCart: this.props.myCart,
                 },
               }}
@@ -50,6 +105,15 @@ class Products extends Component {
     return (
       <div>
         <h1 style={{textAlign: 'center'}}>רשימת מוצרים</h1>
+        <Input
+          elementType={this.state.search.elementType}
+          elementConfig={this.state.search.elementConfig}
+          value={this.state.search.value}
+          invalid={!this.state.search.valid}
+          shouldValidate={this.state.search.validation}
+          touched={this.state.search.touched}
+          changed={e => this.handleChangeSearch (e)}
+        />
         <div>{products}</div>
       </div>
     );

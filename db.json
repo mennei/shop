@@ -1,0 +1,1956 @@
+/* 1 */
+{
+    "_id": ObjectId("5bd006acac74ee05eca05bbe"),
+    "productHebName": "מיץ לימון",
+    "price": 6.0
+}
+/* 2 */
+{
+    "_id": ObjectId("5d257de8d94b89ef265ebbaa"),
+    "productHebName": "דני",
+    "price": 6.0
+}
+/* 3 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec5ff"),
+    "productHebName": "נוזל שמשות",
+    "price": 10.0
+}
+/* 4 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec601"),
+    "productHebName": "מלפפונים",
+    "price": 3.0
+}
+/* 5 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec603"),
+    "productHebName": "שומר",
+    "price": 7.0
+}
+/* 6 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec605"),
+    "productHebName": "יולו וניל או בננה",
+    "price": 5.0
+}
+/* 7 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec607"),
+    "productHebName": "אפרסק",
+    "price": 1.0
+}
+/* 8 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec609"),
+    "productHebName": "טונה",
+    "price": 3.0
+}
+/* 9 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec60b"),
+    "productHebName": "ביצים",
+    "price": 10.0
+}
+/* 10 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec60d"),
+    "productHebName": "פתיתים",
+    "price": 8.0
+}
+/* 11 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec60f"),
+    "productHebName": "ספגטי",
+    "price": 7.0
+}
+/* 12 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec611"),
+    "productHebName": "רסק עגבניות",
+    "price": 5.0
+}
+/* 13 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec613"),
+    "productHebName": "ביסקוויטים לוטוס",
+    "price": 1.0
+}
+/* 14 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec615"),
+    "productHebName": "ממרח לוטוס",
+    "price": 2.0
+}
+/* 15 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec617"),
+    "productHebName": "קרם קרקר",
+    "price": 6.0
+}
+/* 16 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec619"),
+    "productHebName": "פרכיות אורז",
+    "price": 4.0
+}
+/* 17 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec61b"),
+    "productHebName": "חלב",
+    "price": 9.0
+}
+/* 18 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec61d"),
+    "productHebName": "קוטג'/גבינה מיני אישי",
+    "price": 10.0
+}
+/* 19 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec61f"),
+    "productHebName": "ריצ'",
+    "price": 10.0
+}
+/* 20 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec621"),
+    "productHebName": "סלמון",
+    "price": 7.0
+}
+/* 21 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec625"),
+    "productHebName": "שמנת חמוצה",
+    "price": 7.0
+}
+/* 22 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec627"),
+    "productHebName": "שמנת מתוקה",
+    "price": 2.0
+}
+/* 23 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec629"),
+    "productHebName": "שמן",
+    "price": 9.0
+}
+/* 24 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec631"),
+    "productHebName": "דג מלרוזה",
+    "price": 10.0
+}
+/* 25 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec633"),
+    "productHebName": "מכסה לשירותים",
+    "price": 7.0
+}
+/* 26 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec635"),
+    "productHebName": "דנונה שוקולד לטליה",
+    "price": 5.0
+}
+/* 27 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec639"),
+    "productHebName": "לימונים",
+    "price": 10.0
+}
+/* 28 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec63b"),
+    "productHebName": "כרוב סגול",
+    "price": 4.0
+}
+/* 29 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec63d"),
+    "productHebName": "עגבניות",
+    "price": 4.0
+}
+/* 30 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec63f"),
+    "productHebName": "עגבניות שרי",
+    "price": 3.0
+}
+/* 31 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec641"),
+    "productHebName": "חסה",
+    "price": 7.0
+}
+/* 32 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec643"),
+    "productHebName": "תירס שימורים",
+    "price": 1.0
+}
+/* 33 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec645"),
+    "productHebName": "מיץ לימון",
+    "price": 4.0
+}
+/* 34 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec647"),
+    "productHebName": "סנו פרקט",
+    "price": 6.0
+}
+/* 35 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec649"),
+    "productHebName": "אג'קס תכלת/סגול",
+    "price": 10.0
+}
+/* 36 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec64b"),
+    "productHebName": "אריאל נוזל כביסה",
+    "price": 5.0
+}
+/* 37 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec64d"),
+    "productHebName": "ממרח שוקולד השחר גדול",
+    "price": 6.0
+}
+/* 38 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec64f"),
+    "productHebName": "מלח שולחן",
+    "price": 8.0
+}
+/* 39 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec651"),
+    "productHebName": "קמח",
+    "price": 10.0
+}
+/* 40 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec653"),
+    "productHebName": "מיונז",
+    "price": 1.0
+}
+/* 41 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec655"),
+    "productHebName": "2 תירס בקופסה",
+    "price": 3.0
+}
+/* 42 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec657"),
+    "productHebName": "1 מלפפון חמוץ",
+    "price": 2.0
+}
+/* 43 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec659"),
+    "productHebName": "1 זיתים ירוקים פרוסים",
+    "price": 10.0
+}
+/* 44 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec65b"),
+    "productHebName": "חסהלט",
+    "price": 8.0
+}
+/* 45 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec65d"),
+    "productHebName": "כוסברה",
+    "price": 6.0
+}
+/* 46 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec65f"),
+    "productHebName": "פטרוזיליה",
+    "price": 9.0
+}
+/* 47 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec661"),
+    "productHebName": "שום",
+    "price": 10.0
+}
+/* 48 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec663"),
+    "productHebName": "בצל",
+    "price": 4.0
+}
+/* 49 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec665"),
+    "productHebName": "בירה שחורה",
+    "price": 9.0
+}
+/* 50 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec667"),
+    "productHebName": "מים",
+    "price": 10.0
+}
+/* 1 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec669"),
+    "productHebName": "פיוזטי אפרסק",
+    "price": 8.0
+}
+/* 2 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec66b"),
+    "productHebName": "אפרסקים",
+    "price": 10.0
+}
+/* 3 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec66d"),
+    "productHebName": "פלסטרים",
+    "price": 10.0
+}
+/* 4 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec671"),
+    "productHebName": "לחם פרוס",
+    "price": 4.0
+}
+/* 5 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec673"),
+    "productHebName": "ספגטי",
+    "price": 2.0
+}
+/* 6 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec675"),
+    "productHebName": "פתיתים",
+    "price": 5.0
+}
+/* 7 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec677"),
+    "productHebName": "צלחות",
+    "price": 1.0
+}
+/* 8 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec679"),
+    "productHebName": "מזלגות",
+    "price": 3.0
+}
+/* 9 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec67b"),
+    "productHebName": "כוסות חד פעמי",
+    "price": 3.0
+}
+/* 10 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec67d"),
+    "productHebName": "סכינים",
+    "price": 5.0
+}
+/* 11 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec67f"),
+    "productHebName": "ממרח שוקולד נוטלה",
+    "price": 6.0
+}
+/* 12 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec681"),
+    "productHebName": "אורז",
+    "price": 3.0
+}
+/* 13 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec683"),
+    "productHebName": "תפוחא",
+    "price": 5.0
+}
+/* 14 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec685"),
+    "productHebName": "מלפפונים",
+    "price": 1.0
+}
+/* 15 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec687"),
+    "productHebName": "200 גרם חמאה",
+    "price": 7.0
+}
+/* 16 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec689"),
+    "productHebName": "שומר",
+    "price": 7.0
+}
+/* 17 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec68b"),
+    "productHebName": "אבוקדו",
+    "price": 8.0
+}
+/* 18 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec68d"),
+    "productHebName": "כרוב לבן",
+    "price": 4.0
+}
+/* 19 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec68f"),
+    "productHebName": "שוקו",
+    "price": 6.0
+}
+/* 20 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec691"),
+    "productHebName": "חסה",
+    "price": 9.0
+}
+/* 21 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec693"),
+    "productHebName": "אייס קפה",
+    "price": 1.0
+}
+/* 22 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec695"),
+    "productHebName": "מוקה",
+    "price": 3.0
+}
+/* 23 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec697"),
+    "productHebName": "בננה",
+    "price": 2.0
+}
+/* 24 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec699"),
+    "productHebName": "200 גרם קונפלור",
+    "price": 10.0
+}
+/* 25 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec69b"),
+    "productHebName": "שוואפס",
+    "price": 1.0
+}
+/* 26 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec69d"),
+    "productHebName": "גלידה פרווה",
+    "price": 2.0
+}
+/* 27 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec69f"),
+    "productHebName": "3 נסטי",
+    "price": 7.0
+}
+/* 28 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6a1"),
+    "productHebName": "קונוסים",
+    "price": 8.0
+}
+/* 29 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6a3"),
+    "productHebName": "ממרח לוטוס",
+    "price": 8.0
+}
+/* 30 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6a5"),
+    "productHebName": "בורקסים תפוחא",
+    "price": 7.0
+}
+/* 31 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6a7"),
+    "productHebName": "רוטב פטריות",
+    "price": 2.0
+}
+/* 32 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6a9"),
+    "productHebName": "4 ג'ריקנים של חלב",
+    "price": 2.0
+}
+/* 33 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6ab"),
+    "productHebName": "אגסים",
+    "price": 5.0
+}
+/* 34 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6ad"),
+    "productHebName": "נקטרינות",
+    "price": 1.0
+}
+/* 35 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6af"),
+    "productHebName": "אבטיח",
+    "price": 10.0
+}
+/* 36 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6b1"),
+    "productHebName": "דובדבנים",
+    "price": 8.0
+}
+/* 37 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6b3"),
+    "productHebName": "משמשים",
+    "price": 1.0
+}
+/* 38 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6b5"),
+    "productHebName": "קפה טסטר צויס",
+    "price": 7.0
+}
+/* 39 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6b7"),
+    "productHebName": "פירורי לחם",
+    "price": 8.0
+}
+/* 40 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6b9"),
+    "productHebName": "שלוקים",
+    "price": 5.0
+}
+/* 41 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6bb"),
+    "productHebName": "סנט מוריץ לתנורים",
+    "price": 10.0
+}
+/* 42 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6bd"),
+    "productHebName": "5 עגבניות",
+    "price": 4.0
+}
+/* 43 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6bf"),
+    "productHebName": "5 מלפפונים",
+    "price": 10.0
+}
+/* 44 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6c1"),
+    "productHebName": "גזר",
+    "price": 3.0
+}
+/* 45 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6c3"),
+    "productHebName": "גמבה אדומה",
+    "price": 6.0
+}
+/* 46 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6c5"),
+    "productHebName": "שומר",
+    "price": 2.0
+}
+/* 47 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6c7"),
+    "productHebName": "קולורבי",
+    "price": 9.0
+}
+/* 48 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6c9"),
+    "productHebName": "פרותי",
+    "price": 2.0
+}
+/* 49 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6cb"),
+    "productHebName": "משמשים",
+    "price": 5.0
+}
+/* 50 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6cd"),
+    "productHebName": "אפרשזיף",
+    "price": 7.0
+}
+/* 1 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6cf"),
+    "productHebName": "אפרסקים",
+    "price": 1.0
+}
+/* 2 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6d1"),
+    "productHebName": "פרורי לחם",
+    "price": 2.0
+}
+/* 3 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6d3"),
+    "productHebName": "חזה עוף",
+    "price": 2.0
+}
+/* 4 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6d5"),
+    "productHebName": "מיני קוטג'/גבינה",
+    "price": 1.0
+}
+/* 5 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6d7"),
+    "productHebName": "מיני מילקי",
+    "price": 1.0
+}
+/* 6 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6d9"),
+    "productHebName": "גבינה צהובה",
+    "price": 3.0
+}
+/* 7 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6db"),
+    "productHebName": "Yolo שוקולד לבן/חום",
+    "price": 9.0
+}
+/* 8 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6dd"),
+    "productHebName": "לחם פרוס",
+    "price": 3.0
+}
+/* 9 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6df"),
+    "productHebName": "גרנולה",
+    "price": 3.0
+}
+/* 10 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6e1"),
+    "productHebName": "אנטי קאלק",
+    "price": 8.0
+}
+/* 11 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6e3"),
+    "productHebName": "פיתות",
+    "price": 2.0
+}
+/* 12 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6e5"),
+    "productHebName": "שלוקים קטנים",
+    "price": 8.0
+}
+/* 13 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6e7"),
+    "productHebName": "תה ירוק",
+    "price": 7.0
+}
+/* 14 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6e9"),
+    "productHebName": "שמפו פנטן",
+    "price": 1.0
+}
+/* 15 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6eb"),
+    "productHebName": "תחליב רחצה",
+    "price": 9.0
+}
+/* 16 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6ed"),
+    "productHebName": "מרכך פנטן",
+    "price": 7.0
+}
+/* 17 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6ef"),
+    "productHebName": "חומץ תפוחים",
+    "price": 1.0
+}
+/* 18 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6f1"),
+    "productHebName": "כוסות חמים",
+    "price": 5.0
+}
+/* 19 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6f3"),
+    "productHebName": "3 לימונים",
+    "price": 10.0
+}
+/* 20 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6f5"),
+    "productHebName": "בקבוק מים (ליטר)",
+    "price": 8.0
+}
+/* 21 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6f7"),
+    "productHebName": "חזה עוף",
+    "price": 2.0
+}
+/* 22 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6f9"),
+    "productHebName": "שוקיים עוף",
+    "price": 2.0
+}
+/* 23 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6fb"),
+    "productHebName": "5 מושט",
+    "price": 3.0
+}
+/* 24 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6fd"),
+    "productHebName": "נוזל כביסה אריאל",
+    "price": 8.0
+}
+/* 25 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec6ff"),
+    "productHebName": "גבינת מוצרלה מגורדת",
+    "price": 7.0
+}
+/* 26 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec701"),
+    "productHebName": "עגבניות מקולפות שימורים",
+    "price": 6.0
+}
+/* 27 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec703"),
+    "productHebName": "מלווח",
+    "price": 1.0
+}
+/* 28 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec705"),
+    "productHebName": "כרוב לבן",
+    "price": 8.0
+}
+/* 29 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec707"),
+    "productHebName": "משמשים",
+    "price": 4.0
+}
+/* 30 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec709"),
+    "productHebName": "אפרסקים",
+    "price": 4.0
+}
+/* 31 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec70b"),
+    "productHebName": "5 עגבניות",
+    "price": 4.0
+}
+/* 32 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec70d"),
+    "productHebName": "3 קולורבי",
+    "price": 5.0
+}
+/* 33 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec70f"),
+    "productHebName": "2 בצל",
+    "price": 1.0
+}
+/* 34 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec711"),
+    "productHebName": "2 קישוא",
+    "price": 9.0
+}
+/* 35 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec713"),
+    "productHebName": "3 חלב",
+    "price": 4.0
+}
+/* 36 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec715"),
+    "productHebName": "מיני קוטג/גבינה/מילקי",
+    "price": 3.0
+}
+/* 37 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec717"),
+    "productHebName": "פיטנס",
+    "price": 3.0
+}
+/* 38 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec719"),
+    "productHebName": "נייר מגבת",
+    "price": 4.0
+}
+/* 39 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec71b"),
+    "productHebName": "קלוגס",
+    "price": 8.0
+}
+/* 40 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec71d"),
+    "productHebName": "4 בירה שחורה",
+    "price": 3.0
+}
+/* 41 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec71f"),
+    "productHebName": "3 תות בננה",
+    "price": 8.0
+}
+/* 42 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec721"),
+    "productHebName": "2 שוואפס",
+    "price": 4.0
+}
+/* 43 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec723"),
+    "productHebName": "חסהלט",
+    "price": 5.0
+}
+/* 44 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec72d"),
+    "productHebName": "מלח גס",
+    "price": 10.0
+}
+/* 45 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec72f"),
+    "productHebName": "קלוגס",
+    "price": 3.0
+}
+/* 46 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec731"),
+    "productHebName": "פיטנס",
+    "price": 9.0
+}
+/* 47 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec733"),
+    "productHebName": "ציריוס",
+    "price": 3.0
+}
+/* 48 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec735"),
+    "productHebName": "טונה",
+    "price": 1.0
+}
+/* 49 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec737"),
+    "productHebName": "אבקת כביסה אריאל",
+    "price": 7.0
+}
+/* 50 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec739"),
+    "productHebName": "מסטיקים",
+    "price": 6.0
+}
+/* 1 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec73b"),
+    "productHebName": "שקיות סנדוויץ' עם ידיות",
+    "price": 1.0
+}
+/* 2 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec73d"),
+    "productHebName": "בריקות עגולים",
+    "price": 4.0
+}
+/* 3 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec73f"),
+    "productHebName": "צ'יפס קפוא",
+    "price": 10.0
+}
+/* 4 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec741"),
+    "productHebName": "נקנקיות",
+    "price": 7.0
+}
+/* 5 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec743"),
+    "productHebName": "נקניק פסטרמה",
+    "price": 3.0
+}
+/* 6 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec745"),
+    "productHebName": "ביצים",
+    "price": 6.0
+}
+/* 7 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec747"),
+    "productHebName": "פארי",
+    "price": 3.0
+}
+/* 8 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec749"),
+    "productHebName": "תפוצ'יפס",
+    "price": 3.0
+}
+/* 9 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec74b"),
+    "productHebName": "דוריטוס",
+    "price": 9.0
+}
+/* 10 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec74d"),
+    "productHebName": "ענבים",
+    "price": 9.0
+}
+/* 11 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec74f"),
+    "productHebName": "חסהלט",
+    "price": 2.0
+}
+/* 12 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec751"),
+    "productHebName": "כרפס",
+    "price": 8.0
+}
+/* 13 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec753"),
+    "productHebName": "תפוא",
+    "price": 2.0
+}
+/* 14 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec755"),
+    "productHebName": "אפרסקים",
+    "price": 4.0
+}
+/* 15 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec759"),
+    "productHebName": "פרכיות אורז",
+    "price": 4.0
+}
+/* 16 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec75b"),
+    "productHebName": "קוטג'/גבינה מיני",
+    "price": 2.0
+}
+/* 17 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec75f"),
+    "productHebName": "באדי",
+    "price": 10.0
+}
+/* 18 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec763"),
+    "productHebName": "נוזל שמשות",
+    "price": 1.0
+}
+/* 19 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec765"),
+    "productHebName": "מלפפונים",
+    "price": 9.0
+}
+/* 20 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec767"),
+    "productHebName": "שומר",
+    "price": 8.0
+}
+/* 21 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec769"),
+    "productHebName": "יולו וניל או בננה",
+    "price": 5.0
+}
+/* 22 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec76b"),
+    "productHebName": "אפרסק",
+    "price": 4.0
+}
+/* 23 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec76d"),
+    "productHebName": "טונה",
+    "price": 10.0
+}
+/* 24 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec76f"),
+    "productHebName": "ביצים",
+    "price": 3.0
+}
+/* 25 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec771"),
+    "productHebName": "פתיתים",
+    "price": 4.0
+}
+/* 26 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec773"),
+    "productHebName": "ספגטי",
+    "price": 10.0
+}
+/* 27 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec775"),
+    "productHebName": "רסק עגבניות",
+    "price": 9.0
+}
+/* 28 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec777"),
+    "productHebName": "ביסקוויטים לוטוס",
+    "price": 6.0
+}
+/* 29 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec779"),
+    "productHebName": "ממרח לוטוס",
+    "price": 7.0
+}
+/* 30 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec77b"),
+    "productHebName": "קרם קרקר",
+    "price": 9.0
+}
+/* 31 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec77d"),
+    "productHebName": "פרכיות אורז",
+    "price": 9.0
+}
+/* 32 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec77f"),
+    "productHebName": "חלב",
+    "price": 1.0
+}
+/* 33 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec781"),
+    "productHebName": "קוטג'/גבינה מיני אישי",
+    "price": 4.0
+}
+/* 34 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec783"),
+    "productHebName": "ריצ'",
+    "price": 4.0
+}
+/* 35 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec785"),
+    "productHebName": "סלמון",
+    "price": 7.0
+}
+/* 36 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec789"),
+    "productHebName": "שמנת חמוצה",
+    "price": 6.0
+}
+/* 37 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec78b"),
+    "productHebName": "שמנת מתוקה",
+    "price": 5.0
+}
+/* 38 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec78f"),
+    "productHebName": "תביא מהמאפיה",
+    "price": 1.0
+}
+/* 39 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec795"),
+    "productHebName": "דג מלרוזה",
+    "price": 10.0
+}
+/* 40 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec797"),
+    "productHebName": "מכסה לשירותים",
+    "price": 2.0
+}
+/* 41 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec799"),
+    "productHebName": "דנונה שוקולד לטליה",
+    "price": 5.0
+}
+/* 42 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec79d"),
+    "productHebName": "לימונים",
+    "price": 8.0
+}
+/* 43 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec79f"),
+    "productHebName": "כרוב סגול",
+    "price": 10.0
+}
+/* 44 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7a1"),
+    "productHebName": "עגבניות",
+    "price": 9.0
+}
+/* 45 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7a3"),
+    "productHebName": "עגבניות שרי",
+    "price": 10.0
+}
+/* 46 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7a5"),
+    "productHebName": "חסה",
+    "price": 9.0
+}
+/* 47 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7a7"),
+    "productHebName": "תירס שימורים",
+    "price": 2.0
+}
+/* 48 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7a9"),
+    "productHebName": "מיץ לימון",
+    "price": 3.0
+}
+/* 49 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7ab"),
+    "productHebName": "סנו פרקט",
+    "price": 9.0
+}
+/* 50 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7ad"),
+    "productHebName": "אג'קס תכלת/סגול",
+    "price": 5.0
+}
+/* 1 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7af"),
+    "productHebName": "אריאל נוזל כביסה",
+    "price": 10.0
+}
+/* 2 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7b1"),
+    "productHebName": "ממרח שוקולד השחר גדול",
+    "price": 3.0
+}
+/* 3 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7b3"),
+    "productHebName": "מלח שולחן",
+    "price": 10.0
+}
+/* 4 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7b5"),
+    "productHebName": "קמח",
+    "price": 6.0
+}
+/* 5 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7b7"),
+    "productHebName": "מיונז",
+    "price": 1.0
+}
+/* 6 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7b9"),
+    "productHebName": "2 תירס בקופסה",
+    "price": 1.0
+}
+/* 7 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7bb"),
+    "productHebName": "1 מלפפון חמוץ",
+    "price": 3.0
+}
+/* 8 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7bd"),
+    "productHebName": "1 זיתים ירוקים פרוסים",
+    "price": 8.0
+}
+/* 9 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7bf"),
+    "productHebName": "חסהלט",
+    "price": 5.0
+}
+/* 10 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7c1"),
+    "productHebName": "כוסברה",
+    "price": 4.0
+}
+/* 11 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7c3"),
+    "productHebName": "פטרוזיליה",
+    "price": 2.0
+}
+/* 12 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7c5"),
+    "productHebName": "שום",
+    "price": 1.0
+}
+/* 13 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7c7"),
+    "productHebName": "בצל",
+    "price": 3.0
+}
+/* 14 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7c9"),
+    "productHebName": "בירה שחורה",
+    "price": 7.0
+}
+/* 15 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7cb"),
+    "productHebName": "מים",
+    "price": 1.0
+}
+/* 16 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7cd"),
+    "productHebName": "פיוזטי אפרסק",
+    "price": 5.0
+}
+/* 17 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7cf"),
+    "productHebName": "אפרסקים",
+    "price": 9.0
+}
+/* 18 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7d1"),
+    "productHebName": "פלסטרים",
+    "price": 6.0
+}
+/* 19 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7d5"),
+    "productHebName": "לחם פרוס",
+    "price": 7.0
+}
+/* 20 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7d7"),
+    "productHebName": "ספגטי",
+    "price": 8.0
+}
+/* 21 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7d9"),
+    "productHebName": "פתיתים",
+    "price": 8.0
+}
+/* 22 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7db"),
+    "productHebName": "צלחות",
+    "price": 7.0
+}
+/* 23 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7dd"),
+    "productHebName": "מזלגות",
+    "price": 10.0
+}
+/* 24 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7df"),
+    "productHebName": "כוסות חד פעמי",
+    "price": 9.0
+}
+/* 25 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7e1"),
+    "productHebName": "סכינים",
+    "price": 9.0
+}
+/* 26 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7e3"),
+    "productHebName": "ממרח שוקולד נוטלה",
+    "price": 5.0
+}
+/* 27 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7eb"),
+    "productHebName": "אורז",
+    "price": 1.0
+}
+/* 28 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7ed"),
+    "productHebName": "תפוחא",
+    "price": 3.0
+}
+/* 29 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7ef"),
+    "productHebName": "מלפפונים",
+    "price": 4.0
+}
+/* 30 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7f1"),
+    "productHebName": "200 גרם חמאה",
+    "price": 10.0
+}
+/* 31 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7f3"),
+    "productHebName": "שומר",
+    "price": 9.0
+}
+/* 32 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7f5"),
+    "productHebName": "אבוקדו",
+    "price": 1.0
+}
+/* 33 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7f7"),
+    "productHebName": "כרוב לבן",
+    "price": 9.0
+}
+/* 34 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7f9"),
+    "productHebName": "שוקו",
+    "price": 7.0
+}
+/* 35 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7fb"),
+    "productHebName": "חסה",
+    "price": 10.0
+}
+/* 36 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7fd"),
+    "productHebName": "אייס קפה",
+    "price": 5.0
+}
+/* 37 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec7ff"),
+    "productHebName": "מוקה",
+    "price": 2.0
+}
+/* 38 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec801"),
+    "productHebName": "בננה",
+    "price": 2.0
+}
+/* 39 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec803"),
+    "productHebName": "200 גרם קונפלור",
+    "price": 1.0
+}
+/* 40 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec809"),
+    "productHebName": "3 נסטי",
+    "price": 10.0
+}
+/* 41 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec80b"),
+    "productHebName": "קונוסים",
+    "price": 3.0
+}
+/* 42 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec80d"),
+    "productHebName": "ממרח לוטוס",
+    "price": 4.0
+}
+/* 43 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec80f"),
+    "productHebName": "בורקסים תפוחא",
+    "price": 2.0
+}
+/* 44 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec811"),
+    "productHebName": "רוטב פטריות",
+    "price": 6.0
+}
+/* 45 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec813"),
+    "productHebName": "4 ג'ריקנים של חלב",
+    "price": 10.0
+}
+/* 46 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec815"),
+    "productHebName": "אגסים",
+    "price": 9.0
+}
+/* 47 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec817"),
+    "productHebName": "נקטרינות",
+    "price": 3.0
+}
+/* 48 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec819"),
+    "productHebName": "אבטיח",
+    "price": 1.0
+}
+/* 49 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec81b"),
+    "productHebName": "דובדבנים",
+    "price": 9.0
+}
+/* 50 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec81d"),
+    "productHebName": "משמשים",
+    "price": 5.0
+}
+/* 1 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec81f"),
+    "productHebName": "קפה טסטר צויס",
+    "price": 7.0
+}
+/* 2 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec821"),
+    "productHebName": "פירורי לחם",
+    "price": 4.0
+}
+/* 3 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec823"),
+    "productHebName": "שלוקים",
+    "price": 10.0
+}
+/* 4 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec825"),
+    "productHebName": "סנט מוריץ לתנורים",
+    "price": 10.0
+}
+/* 5 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec827"),
+    "productHebName": "5 עגבניות",
+    "price": 2.0
+}
+/* 6 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec829"),
+    "productHebName": "5 מלפפונים",
+    "price": 4.0
+}
+/* 7 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec82b"),
+    "productHebName": "גזר",
+    "price": 7.0
+}
+/* 8 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec82d"),
+    "productHebName": "גמבה אדומה",
+    "price": 5.0
+}
+/* 9 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec82f"),
+    "productHebName": "שומר",
+    "price": 2.0
+}
+/* 10 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec831"),
+    "productHebName": "קולורבי",
+    "price": 7.0
+}
+/* 11 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec835"),
+    "productHebName": "משמשים",
+    "price": 6.0
+}
+/* 12 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec837"),
+    "productHebName": "אפרשזיף",
+    "price": 10.0
+}
+/* 13 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec839"),
+    "productHebName": "אפרסקים",
+    "price": 2.0
+}
+/* 14 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec83b"),
+    "productHebName": "פרורי לחם",
+    "price": 10.0
+}
+/* 15 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec83d"),
+    "productHebName": "חזה עוף",
+    "price": 2.0
+}
+/* 16 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec841"),
+    "productHebName": "מיני קוטג'/גבינה",
+    "price": 5.0
+}
+/* 17 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec843"),
+    "productHebName": "מיני מילקי",
+    "price": 9.0
+}
+/* 18 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec845"),
+    "productHebName": "גבינה צהובה",
+    "price": 3.0
+}
+/* 19 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec847"),
+    "productHebName": "Yolo שוקולד לבן/חום",
+    "price": 3.0
+}
+/* 20 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec84d"),
+    "productHebName": "גרנולה",
+    "price": 4.0
+}
+/* 21 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec851"),
+    "productHebName": "אנטי קאלק",
+    "price": 10.0
+}
+/* 22 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec853"),
+    "productHebName": "פיתות",
+    "price": 3.0
+}
+/* 23 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec855"),
+    "productHebName": "שלוקים קטנים",
+    "price": 9.0
+}
+/* 24 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec859"),
+    "productHebName": "תה ירוק",
+    "price": 8.0
+}
+/* 25 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec85b"),
+    "productHebName": "שמפו פנטן",
+    "price": 4.0
+}
+/* 26 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec85d"),
+    "productHebName": "תחליב רחצה",
+    "price": 7.0
+}
+/* 27 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec85f"),
+    "productHebName": "מרכך פנטן",
+    "price": 2.0
+}
+/* 28 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec861"),
+    "productHebName": "חומץ תפוחים",
+    "price": 2.0
+}
+/* 29 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec863"),
+    "productHebName": "כוסות חמים",
+    "price": 7.0
+}
+/* 30 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec865"),
+    "productHebName": "3 לימונים",
+    "price": 9.0
+}
+/* 31 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec867"),
+    "productHebName": "בקבוק מים (ליטר)",
+    "price": 10.0
+}
+/* 32 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec869"),
+    "productHebName": "חזה עוף",
+    "price": 8.0
+}
+/* 33 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec86b"),
+    "productHebName": "שוקיים עוף",
+    "price": 7.0
+}
+/* 34 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec86d"),
+    "productHebName": "5 מושט",
+    "price": 10.0
+}
+/* 35 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec86f"),
+    "productHebName": "נוזל כביסה אריאל",
+    "price": 9.0
+}
+/* 36 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec871"),
+    "productHebName": "גבינת מוצרלה מגורדת",
+    "price": 4.0
+}
+/* 37 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec873"),
+    "productHebName": "עגבניות מקולפות שימורים",
+    "price": 2.0
+}
+/* 38 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec875"),
+    "productHebName": "מלווח",
+    "price": 2.0
+}
+/* 39 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec877"),
+    "productHebName": "כרוב לבן",
+    "price": 2.0
+}
+/* 40 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec879"),
+    "productHebName": "משמשים",
+    "price": 6.0
+}
+/* 41 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec87b"),
+    "productHebName": "אפרסקים",
+    "price": 3.0
+}
+/* 42 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec87d"),
+    "productHebName": "5 עגבניות",
+    "price": 1.0
+}
+/* 43 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec87f"),
+    "productHebName": "3 קולורבי",
+    "price": 10.0
+}
+/* 44 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec881"),
+    "productHebName": "2 בצל",
+    "price": 3.0
+}
+/* 45 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec883"),
+    "productHebName": "2 קישוא",
+    "price": 5.0
+}
+/* 46 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec885"),
+    "productHebName": "3 חלב",
+    "price": 5.0
+}
+/* 47 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec887"),
+    "productHebName": "מיני קוטג/גבינה/מילקי",
+    "price": 4.0
+}
+/* 48 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec889"),
+    "productHebName": "פיטנס",
+    "price": 6.0
+}
+/* 49 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec88b"),
+    "productHebName": "נייר מגבת",
+    "price": 8.0
+}
+/* 50 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec88d"),
+    "productHebName": "קלוגס",
+    "price": 9.0
+}
+/* 1 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec891"),
+    "productHebName": "3 תות בננה",
+    "price": 10.0
+}
+/* 2 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec893"),
+    "productHebName": "2 שוואפס",
+    "price": 9.0
+}
+/* 3 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec89f"),
+    "productHebName": "מלח גס",
+    "price": 9.0
+}
+/* 4 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec8a1"),
+    "productHebName": "קלוגס",
+    "price": 10.0
+}
+/* 5 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec8a3"),
+    "productHebName": "פיטנס",
+    "price": 5.0
+}
+/* 6 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec8a5"),
+    "productHebName": "ציריוס",
+    "price": 2.0
+}
+/* 7 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec8a9"),
+    "productHebName": "אבקת כביסה אריאל",
+    "price": 8.0
+}
+/* 8 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec8ab"),
+    "productHebName": "מסטיקים",
+    "price": 7.0
+}
+/* 9 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec8ad"),
+    "productHebName": "שקיות סנדוויץ' עם ידיות",
+    "price": 3.0
+}
+/* 10 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec8af"),
+    "productHebName": "בריקות עגולים",
+    "price": 8.0
+}
+/* 11 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec8b1"),
+    "productHebName": "צ'יפס קפוא",
+    "price": 1.0
+}
+/* 12 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec8b3"),
+    "productHebName": "נקנקיות",
+    "price": 2.0
+}
+/* 13 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec8b5"),
+    "productHebName": "נקניק פסטרמה",
+    "price": 5.0
+}
+/* 14 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec8b7"),
+    "productHebName": "ביצים",
+    "price": 7.0
+}
+/* 15 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec8b9"),
+    "productHebName": "פארי",
+    "price": 6.0
+}
+/* 16 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec8bb"),
+    "productHebName": "תפוצ'יפס",
+    "price": 3.0
+}
+/* 17 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec8bd"),
+    "productHebName": "דוריטוס",
+    "price": 6.0
+}
+/* 18 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec8bf"),
+    "productHebName": "ענבים",
+    "price": 4.0
+}
+/* 19 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec8c1"),
+    "productHebName": "חסהלט",
+    "price": 5.0
+}
+/* 20 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec8c3"),
+    "productHebName": "כרפס",
+    "price": 2.0
+}
+/* 21 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec8c5"),
+    "productHebName": "תפוא",
+    "price": 9.0
+}
+/* 22 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec8c7"),
+    "productHebName": "אפרסקים",
+    "price": 7.0
+}
+/* 23 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec8c9"),
+    "productHebName": "חלב",
+    "price": 10.0
+}
+/* 24 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec8cb"),
+    "productHebName": "פרכיות אורז",
+    "price": 6.0
+}
+/* 25 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec8cd"),
+    "productHebName": "קוטג'/גבינה מיני",
+    "price": 10.0
+}
+/* 26 */
+{
+    "_id": ObjectId("5d25a4efd94b89ef265ec8d1"),
+    "productHebName": "באדי",
+    "price": 10.0
+}

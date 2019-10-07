@@ -11,14 +11,25 @@ const getProductsList = async req => {
         conf.DB_NAME,
         `${conf.MONGODB_CONNECTION_STRING}/${conf.DB_NAME}`
       );
-      await collection.find ().toArray (async (err, result) => {
+      await collection.find ().toArray (async (err, results) => {
         if (err) {
           return reject (err);
         }
-        if (result && result.length === 0) {
+        if (results && results.length === 0) {
           return reject ('Products list is empty');
         }
-        return resolve (result);
+        const uniq = results.filter ((item, index) => {
+          return (
+            index ===
+            results.findIndex (obj => {
+              return (
+                JSON.stringify (obj.productHebName) ===
+                JSON.stringify (item.productHebName)
+              );
+            })
+          );
+        });
+        return resolve (uniq);
       });
     });
   } catch (error) {

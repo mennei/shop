@@ -37,8 +37,8 @@ export const cartStart = (idToken, products, unsaveCart, totalCart) => {
 
 export const fetchProducts = (token, myCart, total) => {
   return dispatch => {
-    if (!token){
-      token = localStorage.getItem('token');
+    if (!token) {
+      token = localStorage.getItem ('token');
     }
     if (!token) {
       return dispatch (
@@ -54,7 +54,7 @@ export const fetchProducts = (token, myCart, total) => {
             let dbList = data.productsList;
             dispatch (cartStart (token, dbList, myCart, total));
             dispatch (fetchProductsSuccess (token, dbList, myCart, total));
-            localStorage.setItem('token', token);
+            localStorage.setItem ('token', token);
           },
           err => {
             console.log (err);
@@ -63,5 +63,25 @@ export const fetchProducts = (token, myCart, total) => {
         );
       })
       .catch (err => dispatch (fetchProductsFail (err)));
+  };
+};
+
+export const onSearch = newList => {
+  return {
+    type: actionTypes.ON_SEARCH,
+    list: newList,
+  };
+};
+
+export const onSearchChange = newList => {
+  return dispatch => {
+    const token = localStorage.getItem ('token');
+    if (!token) {
+      return dispatch (
+        fetchProductsFail ('Invalid token when fetching products')
+      );
+    } else {
+      dispatch (onSearch (newList));
+    }
   };
 };

@@ -39,6 +39,10 @@ const cartStart = (state, action) => {
   });
 };
 
+const onSearch = (state, action) => {
+  return updateObject (state, {list: action.list});
+};
+
 const productsReducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.FETCH_PRODUCTS_START:
@@ -49,6 +53,8 @@ const productsReducer = (state = initialState, action) => {
       return fetchProductsFail (state, action);
     case actionTypes.CART_START:
       return cartStart (state, action);
+    case actionTypes.ON_SEARCH:
+      return onSearch (state, action);
     default:
       return state;
   }
