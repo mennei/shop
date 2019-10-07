@@ -70,14 +70,12 @@ class Products extends Component {
     } else {
       newList = [...this.props.list];
     }
-    console.log (newList);
     return newList;
   }
 
   render () {
     let products = <Spinner />;
     if (!this.props.loading && this.props.list) {
-      console.log (this.state.search.filter);
       products = this.state.search.filter.map (dbProduct => {
         const {productHebName, price, _id} = dbProduct;
         return (

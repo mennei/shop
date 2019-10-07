@@ -8,7 +8,6 @@ import * as Styled from '../Auth/StyledAuth';
 
 class Cart extends Component {
   componentDidMount () {
-    console.log (this.props);
     const {router, myCart, total} = this.props;
     let activeToken = router && router.query && router.query.token
       ? router.query.token
@@ -31,7 +30,7 @@ class Cart extends Component {
       this.props.list[0].length > 0
     ) {
       products = (
-        <div>
+        <div key={new Date ().getMilliseconds () * Math.random ()}>
           <h3>מוצרים בעגלה</h3>
           <div>שם:{this.props.list[0].name}</div>
           <div>
@@ -53,7 +52,7 @@ class Cart extends Component {
     ) {
       products = this.props.myCart.map (product => {
         return (
-          <div key={new Date ()}>
+          <div key={new Date ().getMilliseconds () * Math.random ()}>
             <h3>מוצר חדש</h3>
             <div>שם:{product.name}</div>
             <div>
